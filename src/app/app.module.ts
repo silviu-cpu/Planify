@@ -8,6 +8,9 @@ import { PricingComponent } from './components/pricing/pricing.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HowitworksComponent } from './components/howitworks/howitworks.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { MediapostsComponent } from './components/mediaposts/mediaposts.component';
+import { FreeComponent } from './components/free/free.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { HowitworksComponent } from './components/howitworks/howitworks.componen
     PricingComponent,
     AboutComponent,
     ContactComponent,
-    HowitworksComponent
+    HowitworksComponent,
+    CardsComponent,
+    MediapostsComponent,
+    FreeComponent
   ],
   imports: [
     BrowserModule,
