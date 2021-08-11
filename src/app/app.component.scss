@@ -1,3 +1,13 @@
+.btn-outline-primary:hover{
+    color:white;
+    background-color: purple;
+}
+
+.btn-outline-primary{
+    border-color: purple;
+    color: purple;
+}
+
 .underline-hover-effect{
     display:inline-block;
     position: relative;
@@ -10,8 +20,8 @@
     bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #010A4B;
-    background-image: linear-gradient(to right, #010A4B, white);
+    background-color: purple;
+    background-image: linear-gradient(to right, purple, white);
     transition: width 0.25s ease-out;
 }
 
@@ -22,7 +32,15 @@
 .p-0{
     padding: 0;
 }
-
+.m-0{
+    margin: 0;
+    font-size: 10px;
+    color: purple;
+}
 .text-color{
     color:#010A4B;
+}
+
+br{
+    border-radius: 25%;
 }
