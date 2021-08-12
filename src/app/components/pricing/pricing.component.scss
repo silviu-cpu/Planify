@@ -1,0 +1,36 @@
+.background{
+    height: 100vh;
+    width: 100%;
+}
+
+.center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m-50{
+    margin-top:50px;
+}
+
+.btn-outline-primary:hover{
+    color:white;
+    background-color: purple;
+}
+
+.btn-outline-primary{
+    border-color: purple;
+    color: purple;
+}
+
+.width{
+    width:200px;
+}
+
+.text-color-purple{
+    color:purple;
+}
+
+.text-color-blue{
+    color: #010A4B;
+}
