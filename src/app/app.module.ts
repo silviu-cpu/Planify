@@ -11,6 +11,8 @@ import { HowitworksComponent } from './components/howitworks/howitworks.componen
 import { CardsComponent } from './components/cards/cards.component';
 import { MediapostsComponent } from './components/mediaposts/mediaposts.component';
 import { FreeComponent } from './components/free/free.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,14 @@ import { FreeComponent } from './components/free/free.component';
     HowitworksComponent,
     CardsComponent,
     MediapostsComponent,
-    FreeComponent
+    FreeComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

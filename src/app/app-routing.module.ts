@@ -8,12 +8,12 @@ import { PricingComponent } from './components/pricing/pricing.component';
 const routes: Routes = [
   {path: '', component: AboutComponent},
   {path: 'pricing', component: PricingComponent},
-  {path: 'contact', component: ContactComponent},
+  {path: 'aboutus', component: ContactComponent},
   {path: 'howitworks', component: HowitworksComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,51 +1,12 @@
 
-<div class="container p-0">
-  <nav class="navbar navbar-expand-md navbar-gray text-color">
-    <a href="/" class="navbar-brand text-color merienda">Planify</a>
-    <p class="m-0"> Your marketing buddy </p> 
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapsse"
-      data-bs-target="#toggleMobileMenu"
-      aria-controls="toggleMobileMenu"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="toggleMobileMenu">
-      <ul class="navbar-nav ms-auto text-center">
-        <li>
-          <a class="nav-link text-color underline-hover-effect" routerLink="">About</a>
-        </li>
-        <li>
-          <a class="nav-link text-color underline-hover-effect" routerLink="pricing">Pricing</a>
-        </li>
-        <li>
-          <a class="nav-link text-color underline-hover-effect" routerLink="contact">Contact</a>
-        </li>
-        <li>
-          <a class="nav-link text-color underline-hover-effect" routerLink="howitworks" >How it Works</a>
-        </li>
-        <li>
-          <button type="button" class="btn btn-outline-primary">Login</button>
-        </li>
-      </ul>
-    </div>
-  </nav>
-</div>
+<app-header></app-header>
+
+<hr class="m-0 hr-color">
 
 <div class="container"> 
   <router-outlet></router-outlet>
 </div>
 
 <hr class="m-0 hr-color">
-<footer class="text-center text-lg-start navbar-grayer">
-  <!-- Copyright -->
-  <div class="text-center p-3  text-color montserrat">
-    © 2021 Copyright:
-    <a class="text-dark text-color copyright merienda" style="text-decoration: none; color: purple !important">Planify </a>
-  </div>
-  <!-- Copyright -->
-</footer>
+
+<app-footer></app-footer>
