@@ -39,12 +39,12 @@
 .hover-effect{
     
     box-shadow: 0px 0px 0px grey;
-    -webkit-transition:  box-shadow .6s ease-out;
+    transition:  box-shadow .6s ease-out;
     box-shadow: .8px .9px 3px grey;
     
 }
 
 .hover-effect:hover{
     box-shadow: 1px 8px 20px grey;
-    -webkit-transition:  box-shadow .6s ease-in;
+    transition:  box-shadow .6s ease-in;
 }
