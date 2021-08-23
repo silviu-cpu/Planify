@@ -13,11 +13,12 @@ import { MediapostsComponent } from './components/mediaposts/mediaposts.componen
 import { FreeComponent } from './components/free/free.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
     PricingComponent,
     AboutComponent,
     ContactComponent,
@@ -26,7 +27,9 @@ import { FooterComponent } from './components/footer/footer.component';
     MediapostsComponent,
     FreeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RegistrationComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
