@@ -1,0 +1,39 @@
+.background{
+    height: 83vh;
+    width: 100%;
+}
+
+.positioning-center{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.post{
+    width: 500px;
+    height: 500px;
+}
+
+.text-color{
+    color:#010A4B;
+}
+
+.text-color-purple{
+    color:purple;
+}
+
+.p-30{
+    padding-bottom: 30px;
+}
+
+.btn-outline-primary:hover{
+    color:white;
+    background-color: #010A4B;
+    transition: all 0.3s ease-in;
+}
+
+.btn-outline-primary{
+    border-color: #010A4B;
+    color: #010A4B;
+    width: 250px;
+}

@@ -19,6 +19,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginserviceService } from './services/loginservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
+import { TextsvgComponent } from './components/textsvg/textsvg.component';
+import { PerfectplanComponent } from './components/perfectplan/perfectplan.component';
+import { PricecardsComponent } from './components/pricecards/pricecards.component';
+import { AboutusComponent } from './components/aboutus/aboutus.component';
+import { VideoComponent } from './components/video/video.component';
 
 
 @NgModule({
@@ -35,7 +40,12 @@ import { LoginComponent } from './components/login/login.component';
     FooterComponent,
     RegistrationComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    TextsvgComponent,
+    PerfectplanComponent,
+    PricecardsComponent,
+    AboutusComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,
