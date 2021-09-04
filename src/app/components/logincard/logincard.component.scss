@@ -1,0 +1,42 @@
+.background{
+    width:100%;
+    height:90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    .position-center{
+        width:390px;
+        border:2px solid purple;
+        padding: 30px 30px 10px 30px;
+    }
+    
+    h1 {
+        color: purple;
+        margin-bottom: 60px;
+    }  
+    
+    .btn-outline-primary:hover{
+        color:white;
+        background-color: purple;
+        transition: all 0.3s ease-in;
+    }
+    
+    .btn-outline-primary{
+        border-color: purple;
+        color: purple;
+        width: auto;
+    }
+
+    small{
+        margin-bottom: 20px;
+    }
+    
+    .button-center{
+        display: flex;
+        justify-content: center;
+        margin:30px auto;
+    }
+}
+
+

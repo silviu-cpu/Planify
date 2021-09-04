@@ -24,6 +24,7 @@ import { PerfectplanComponent } from './components/perfectplan/perfectplan.compo
 import { PricecardsComponent } from './components/pricecards/pricecards.component';
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { VideoComponent } from './components/video/video.component';
+import { LogincardComponent } from './components/logincard/logincard.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { VideoComponent } from './components/video/video.component';
     PerfectplanComponent,
     PricecardsComponent,
     AboutusComponent,
-    VideoComponent
+    VideoComponent,
+    LogincardComponent
   ],
   imports: [
     BrowserModule,
