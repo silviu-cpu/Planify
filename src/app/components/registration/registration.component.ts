@@ -57,14 +57,14 @@ export class RegistrationComponent implements OnInit {
       this._myservice.submitRegister(this.myForm.value)
       .subscribe(
         data => this.successMessage = 'Registration Success',
-        error => this.successMessage = 'Error'
+        error => this.successMessage = 'Registration Failed'
       );
     }
     else{
       this._myservice.submitRegister(this.myForm.value)
       .subscribe(
         data => this.successMessage = 'Failed',
-        error => this.successMessage = 'Error'
+        error => this.successMessage = 'Registration Failed'
       );
     }
   }

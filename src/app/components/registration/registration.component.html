@@ -5,7 +5,7 @@
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
               <input type="text" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted purple">We'll never share your email with anyone else.</small>
+              <small id="emailHelp" class="form-text text-muted notpurple">We'll never share your email with anyone else.</small>
               <br>
               <span *ngIf="isValided('email')" class="warning m-b-20">Email cannot be blank</span>
             </div>
@@ -13,7 +13,7 @@
             <div class="form-group">
                 <label for="exampleInputUsername">Username</label>
                 <input type="text" formControlName="username" class="form-control" id="exampleInputUsername" aria-describedby="emailHelp" placeholder="Enter username">
-                <span *ngIf="isValided('username')" class="warning m-b-20">Email cannot be blank</span>
+                <span *ngIf="isValided('username')" class="warning m-b-20">Username cannot be blank</span>
             </div>
 
             <div class="form-group">
@@ -29,10 +29,11 @@
             </div>
             <br>
             
-            <div class="center">
+            
+            <button type="submit" class="btn btn-outline-primary text-uppercase button-center" (click)="register()">RegiSter</button>
+            <div class="text-center warning">
               {{successMessage}}
             </div>
-            <button type="submit" class="btn btn-outline-primary text-uppercase button-center" (click)="register()">RegiSter</button>
             <button type="button" class="btn btn-outline-primary text-uppercase button-center" routerLink="/login">Login</button>
           </form>
   </div>
