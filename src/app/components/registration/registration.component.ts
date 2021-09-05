@@ -14,7 +14,7 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private _myservice: LoginserviceService) {
     this.myForm = new FormGroup({
-      email: new FormControl(null,Validators.email),
+      email: new FormControl(null,Validators.required),
       username: new FormControl(null,Validators.required),
       password: new FormControl(null, Validators.required),
       cnfpass: new FormControl(null, this.passValidator)
@@ -29,7 +29,9 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  isValided(controlName: any) {
+    return this.myForm.get(controlName)?.invalid && this.myForm.get(controlName)?.touched
+  }
 
   passValidator( control: AbstractControl){
     if(control && (control.value !== null || control.value !== undefined)){
@@ -55,6 +57,13 @@ export class RegistrationComponent implements OnInit {
       this._myservice.submitRegister(this.myForm.value)
       .subscribe(
         data => this.successMessage = 'Registration Success',
+        error => this.successMessage = 'Error'
+      );
+    }
+    else{
+      this._myservice.submitRegister(this.myForm.value)
+      .subscribe(
+        data => this.successMessage = 'Failed',
         error => this.successMessage = 'Error'
       );
     }
