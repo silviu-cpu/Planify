@@ -9,13 +9,13 @@ export class LoginserviceService {
   constructor(private _http: HttpClient) { }
 
   submitRegister(body: any){
-    return this._http.post('http://localhost:3000/users/registration', body, {
+    return this._http.post('https://planifybackend.herokuapp.com/users/registration', body, {
       observe:'body'
     })
   }
 
   login(body:any){
-    return this._http.post('http://localhost:3000/users/login', body, {
+    return this._http.post('https://planifybackend.herokuapp.com/users/login', body, {
       observe:'body'
     })
   }
