@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginserviceService } from 'src/app/services/loginservice.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logincard',
@@ -11,7 +12,7 @@ export class LogincardComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private _myservice: LoginserviceService) { 
+  constructor(private _myservice: LoginserviceService, private _router: Router) { 
     this.loginForm = new FormGroup({
       email: new FormControl(null, Validators.required),
       password: new FormControl(null, Validators.required)
@@ -26,14 +27,15 @@ export class LogincardComponent implements OnInit {
   }
 
   login(){
+    
     console.log(this.loginForm.value)
-
     if(this.loginForm.valid){
       this._myservice.login(this.loginForm.value)
       .subscribe(
         data => {
           console.log(data);
           localStorage.setItem('token',data.toString())
+          this._router.navigate(['/dashboard'])
         },
         error => {}
       )
