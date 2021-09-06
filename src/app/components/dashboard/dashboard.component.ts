@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginserviceService } from 'src/app/services/loginservice.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  username='';
+  constructor(private myService: LoginserviceService, private _router: Router) { 
+    this.myService.getUserName()
+      .subscribe(
+        data => this.username = data.toString(),
+        error => this._router.navigate(['/login'])
+      )
+  }
 
   ngOnInit(): void {
+  }
+
+  logout(){
+    localStorage.removeItem('token');
+    this._router.navigate(['/login'])
   }
 
 }
