@@ -11,7 +11,6 @@ export class DashboardComponent implements OnInit {
 
   username='';
   message='';
-
   constructor(private myService: LoginserviceService, private _router: Router) { 
     this.myService.getUserName()
       .subscribe(
@@ -32,7 +31,10 @@ export class DashboardComponent implements OnInit {
   
   post(){
     
-    return this.message;
+    this.myService.post(this.message)
+    .subscribe(
+      error => this._router.navigate(['/login'])
+    )
    
   }
   
