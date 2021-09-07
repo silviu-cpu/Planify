@@ -10,7 +10,7 @@ import { LoginserviceService } from 'src/app/services/loginservice.service';
 export class DashboardComponent implements OnInit {
 
   username='';
-
+  message='';
   constructor(private myService: LoginserviceService, private _router: Router) { 
     this.myService.getUserName()
       .subscribe(
@@ -30,8 +30,11 @@ export class DashboardComponent implements OnInit {
   }
   
   post(){
-    console.log(this.myService.post);
-    this.myService.post({x: 'y'})
+    
+    this.myService.post(this.message)
+    .subscribe(
+      error => this._router.navigate(['/login'])
+    )
    
   }
   

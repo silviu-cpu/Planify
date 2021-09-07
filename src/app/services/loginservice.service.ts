@@ -27,10 +27,10 @@ export class LoginserviceService {
     })
   }
 
-  post(body:any){
+  post(){
     return this._http.post('https://planifybackend.herokuapp.com/users/dashboard', body, {
       observe:'body'
     })
   }
-  
+
 }
