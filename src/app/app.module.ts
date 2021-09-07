@@ -25,6 +25,7 @@ import { PricecardsComponent } from './components/pricecards/pricecards.componen
 import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { VideoComponent } from './components/video/video.component';
 import { LogincardComponent } from './components/logincard/logincard.component';
+import { FacebookLoginProvider, SocialAuthServiceConfig } from 'angularx-social-login';
 
 
 @NgModule({
@@ -56,7 +57,17 @@ import { LogincardComponent } from './components/logincard/logincard.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ LoginserviceService ],
+  providers: [ LoginserviceService, { provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autoLogin: false,
+      providers: [
+        {
+          id: FacebookLoginProvider.PROVIDER_ID,
+          provider: new FacebookLoginProvider('187424133360729'),
+        },
+      ],
+ } as SocialAuthServiceConfig,
+} ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -26,4 +26,11 @@ export class LoginserviceService {
         params: new HttpParams().append('token',localStorage.getItem('token') || '{}')
     })
   }
+
+  post(body:any){
+    return this._http.post('https://planifybackend.herokuapp.com/users/dashboard', body, {
+      observe:'body'
+    })
+  }
+  
 }
