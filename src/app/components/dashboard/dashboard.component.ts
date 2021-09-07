@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FacebookLoginProvider } from 'angularx-social-login';
 import { LoginserviceService } from 'src/app/services/loginservice.service';
 
 @Component({
@@ -11,11 +10,6 @@ import { LoginserviceService } from 'src/app/services/loginservice.service';
 export class DashboardComponent implements OnInit {
 
   username='';
-  authService: any;
-  httpClient: any;
-  user: any;
-  loggedIn: boolean | undefined;
-  message='';
 
   constructor(private myService: LoginserviceService, private _router: Router) { 
     this.myService.getUserName()
@@ -36,8 +30,9 @@ export class DashboardComponent implements OnInit {
   }
   
   post(){
-    console.log(this.myService +  '   next   ');
-    console.log(this.myService.post)
+    console.log(this.myService.post);
+    this.myService.post({x: 'y'})
+   
   }
   
 
