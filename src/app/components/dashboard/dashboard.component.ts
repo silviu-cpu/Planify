@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
      this.postForm = new FormGroup({
       message: new FormControl(null, Validators.required),
       published: new FormControl(this.published),
-      timestamp: new FormControl(null,Validators.required)
+      scheduled_publish_time: new FormControl(null,Validators.required)
     });
   }
 
