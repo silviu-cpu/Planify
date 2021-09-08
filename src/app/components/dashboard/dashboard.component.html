@@ -1,61 +1,70 @@
 <div class="container background card-effect m-t-20">
-    <h1> Hello {{username}}</h1>
-    <div>
-        This is your Dashboard. 
+    <h1 class="purple m-t-30 p-20"> Hello {{username}}</h1>
+    <div class="black">
+        This is your <strong>Dashboard</strong>
     </div>
-    <div>
+    <div class="black">
         From here you can manage your social-media platforms.
     </div>
-    <button class="btn btn-outline-primary text-uppercase m-t-120" (click)="logout()">Logout</button>
+    <button class="btn btn-outline-primary text-uppercase m-t-100" (click)="logout()">Logout</button>
     
 </div>
 
 
-<div class="container background card-effect-dark m-t-20">
-    <h1> Schedule your Facebook posts</h1>
+<div class="container background card-effect-dark m-t-30">
+    <h2 class="purple p-15"> Schedule your Facebook posts</h2>
     <form [formGroup]="postForm">
         <div class="form-group">
-            <label for="exampleInputEmail1">Message of the Post</label>
-            <input type="text" formControlName="message" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+            <label for="exampleInputEmail1" class="black">Message of the Post</label>
+            <input type="text" formControlName="message" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Message">
         </div>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">UNIX TimeStamp</label>
-            <input type="text" formControlName="timestamp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+        <div class="form-group m-t-20">
+            <label for="exampleInputEmail1" class="black">UNIX TimeStamp</label>
+            <input type="text" formControlName="timestamp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Timestamp">
         </div>
-        <button class="btn btn-outline-primary text-uppercase m-t-40" (click)="post()">Post</button>
+        <button class="btn btn-outline-primary text-uppercase m-t-30" (click)="post()">Post</button>
+        <div class="text-center warning">
+            {{postMessage}}
+          </div>
     </form>
     
 </div>
 
-<div class="container background card-effect-dark m-t-20">
-    <h1> Schedule your Instagram posts</h1>
+<div class="container background card-effect-dark m-t-30">
+    <h2 class="purple p-15"> Schedule your Instagram posts</h2>
     <form [formGroup]="postForm">
         <div class="form-group">
-            <label for="exampleInputEmail1">Message of the Post</label>
-            <input type="text" formControlName="message" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+            <label for="exampleInputEmail1" class="black">Message of the Post</label>
+            <input type="text" formControlName="message" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Message">
         </div>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">UNIX TimeStamp</label>
-            <input type="text" formControlName="timestamp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+        <div class="form-group m-t-20">
+            <label for="exampleInputEmail1" class="black">UNIX TimeStamp</label>
+            <input type="text" formControlName="timestamp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Timestamp">
         </div>
-        <button class="btn btn-outline-primary text-uppercase m-t-40" (click)="post()">Post</button>
+        <button class="btn btn-outline-primary text-uppercase m-t-30" (click)="post()">Post</button>
+        <div class="text-center warning">
+            {{postMessage}}
+        </div>
     </form>
 </div>
 
-<div class="container background card-effect-dark m-t-20 m-b-20">
-    <h1> Schedule your Twitter posts</h1>
+<div class="container background card-effect-dark m-t-30 m-b-20">
+    <h2 class="purple p-15"> Schedule your Twitter posts</h2>
     <form [formGroup]="postForm">
         <div class="form-group">
-            <label for="exampleInputEmail1">Message of the Post</label>
-            <input type="text" formControlName="message" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+            <label for="exampleInputEmail1" class="black">Message of the Post</label>
+            <input type="text" formControlName="message" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Message">
         </div>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">UNIX TimeStamp</label>
-            <input type="text" formControlName="timestamp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+        <div class="form-group m-t-20">
+            <label for="exampleInputEmail1" class="black">UNIX TimeStamp</label>
+            <input type="text" formControlName="timestamp" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Timestamp">
         </div>
-        <button class="btn btn-outline-primary text-uppercase m-t-40" (click)="post()">Post</button>
+        <button class="btn btn-outline-primary text-uppercase m-t-30" (click)="post()">Post</button>
+        <div class="text-center warning">
+            {{postMessage}}
+          </div>
     </form>
 </div>

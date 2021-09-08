@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   username='';
   message='';
   published= 'false';
+  postMessage= '';
 
   constructor(private myService: LoginserviceService, private _router: Router) { 
     this.myService.getUserName()
@@ -42,13 +43,18 @@ export class DashboardComponent implements OnInit {
     
     console.log(this.postForm.value)
     if(this.postForm.valid){
-      this.myService.post(this.postForm.value)
+      this.myService.submitPost(this.postForm.value)
       .subscribe(
-        data => {
-          console.log(data);
-        },
-        error => {}
-      )
+        data => this.postMessage = 'You have successfully submited your post',
+        error => this.postMessage = 'Posted Failed'
+      );
+    }
+    else{
+      this.myService.submitPost(this.postForm.value)
+      .subscribe(
+        data => this.postMessage = 'Posted Failed',
+        error => this.postMessage = 'Posted Failed'
+      );
     }
   
   }

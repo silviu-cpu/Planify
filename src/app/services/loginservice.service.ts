@@ -14,7 +14,7 @@ export class LoginserviceService {
     })
   }
 
-  login(body:any){
+  login(body: any){
     return this._http.post('https://planifybackend.herokuapp.com/users/login', body, {
       observe:'body'
     })
@@ -27,7 +27,7 @@ export class LoginserviceService {
     })
   }
 
-  post(body:any){
+  submitPost(body: any){
     return this._http.post('https://planifybackend.herokuapp.com/users/dashboard', body, {
       observe:'body'
     })
